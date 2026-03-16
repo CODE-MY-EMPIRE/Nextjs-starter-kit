@@ -2,6 +2,7 @@
 
 import ThemeToggle from '@/components/ui/ThemeToggle';
 import Button from '@/components/ui/Button';
+import Card from '@/components/cards/Card';
 
 export default function Home() {
 	return (
@@ -15,12 +16,10 @@ export default function Home() {
 				</p>
 
 				{/* Card Example */}
-				<div className="bg-card border border-border rounded-xl p-6">
-					<h2 className="text-xl font-semibold">Card Component</h2>
-					<p className="text-muted-foreground mt-2">
-						This card should adapt automatically to light and dark mode.
-					</p>
-				</div>
+				<Card
+					title="Card Component"
+					description="This card should adapt automatically to light and dark mode."
+				/>
 
 				{/* Button Example */}
 				<Button
