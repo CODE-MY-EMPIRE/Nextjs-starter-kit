@@ -1,40 +1,51 @@
 'use client';
 
-import ThemeToggle from '@/components/ui/ThemeToggle';
 import Button from '@/components/ui/Button';
 import Card from '@/components/cards/Card';
+import NavbarCTA from '@/components/layout/Navbar/NavbarCTA';
+import Container from '@/components/ui/Container';
 
 export default function Home() {
 	return (
-		<div className="min-h-screen bg-background text-foreground flex items-center justify-center">
-			<main className="w-full max-w-3xl space-y-8 p-10">
-				<ThemeToggle />
-				<h1 className="text-4xl font-bold">Starter Template Test</h1>
+		<div className="min-h-screen bg-background text-foreground">
+			{/* Navbar */}
+			<NavbarCTA />
 
-				<p className="text-muted-foreground">
-					If the theme system works, this text should look muted.
-				</p>
+			{/* Main Content */}
+			<main className="py-16 space-y-16">
+				<Container>
+					{/* Hero Section */}
+					<section className="space-y-6 text-center">
+						<h1>Starter Template Test</h1>
 
-				{/* Card Example */}
-				<Card
-					title="Card Component"
-					description="This card should adapt automatically to light and dark mode."
-				/>
+						<p className="max-w-2xl mx-auto">
+							If the theme system works, this text should look muted and adapt
+							to light and dark mode.
+						</p>
 
-				{/* Button Example */}
-				<Button
-					onClick={() => console.log('clicked')}
-					size="lg"
-				>
-					Primary
-				</Button>
+						<div className="flex items-center justify-center gap-4">
+							<Button size="lg">Get Started</Button>
+							<Button
+								variant="secondary"
+								size="lg"
+							>
+								Learn More
+							</Button>
+						</div>
+					</section>
 
-				<Button
-					variant="secondary"
-					size="lg"
-				>
-					Secondary
-				</Button>
+					{/* Card Section */}
+					<section className="grid md:grid-cols-2 gap-6">
+						<Card
+							title="Card Component"
+							description="This card should adapt automatically to light and dark mode."
+						/>
+						<Card
+							title="Reusable Components"
+							description="Use this starter kit to quickly build landing pages from Figma designs."
+						/>
+					</section>
+				</Container>
 			</main>
 		</div>
 	);
