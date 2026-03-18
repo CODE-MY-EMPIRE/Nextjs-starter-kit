@@ -22,28 +22,6 @@ export default function Home() {
 							If the theme system works, this text should look muted and adapt
 							to light and dark mode.
 						</p>
-
-						<div className="flex items-center justify-center gap-4">
-							<Button size="lg">Get Started</Button>
-							<Button
-								variant="secondary"
-								size="lg"
-							>
-								Learn More
-							</Button>
-						</div>
-					</section>
-
-					{/* Card Section */}
-					<section className="grid md:grid-cols-2 gap-6">
-						<Card
-							title="Card Component"
-							description="This card should adapt automatically to light and dark mode."
-						/>
-						<Card
-							title="Reusable Components"
-							description="Use this starter kit to quickly build landing pages from Figma designs."
-						/>
 					</section>
 				</Container>
 			</main>
