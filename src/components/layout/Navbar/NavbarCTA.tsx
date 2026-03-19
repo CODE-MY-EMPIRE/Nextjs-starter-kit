@@ -8,13 +8,15 @@ import Button from '../../ui/Button';
 import ThemeToggle from '../../ui/ThemeToggle';
 import NavLink from './NavLink';
 import MobileMenu from './MobileMenu';
+import Container from '../../ui/Container';
 
 const NavbarCTA = () => {
 	const [open, setOpen] = useState(false);
 
 	return (
 		<header className="w-full border-b border-border bg-background">
-			<div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+			{/* Use Container here instead of hardcoded max-w-7xl */}
+			<Container className="h-20 flex items-center justify-between">
 				{/* Logo */}
 				<Link
 					href="/"
@@ -44,10 +46,11 @@ const NavbarCTA = () => {
 				<button
 					onClick={() => setOpen(!open)}
 					className="md:hidden text-foreground"
+					aria-label="Toggle menu"
 				>
 					{open ? <HiX size={24} /> : <HiMenu size={24} />}
 				</button>
-			</div>
+			</Container>
 
 			{/* Mobile Menu Component */}
 			<MobileMenu open={open} />
