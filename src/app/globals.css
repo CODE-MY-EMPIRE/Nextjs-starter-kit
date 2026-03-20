@@ -87,19 +87,19 @@ html {
 @layer base {
 
   h1 {
-    @apply text-4xl md:text-5xl font-bold tracking-tight;
+    @apply text-4xl md:text-5xl font-bold tracking-normal leading-tight;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl font-semibold tracking-tight;
+    @apply text-3xl md:text-4xl font-semibold tracking-normal leading-tight;
   }
 
   h3 {
-    @apply text-2xl font-semibold;
+    @apply text-2xl font-semibold tracking-normal leading-tight;
   }
 
   h4 {
-    @apply text-xl font-semibold;
+    @apply text-xl font-semibold tracking-normal leading-tight;
   }
 
   p {
