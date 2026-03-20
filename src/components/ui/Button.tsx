@@ -5,11 +5,15 @@ import React, { ButtonHTMLAttributes } from 'react';
 type ButtonProps = {
 	variant?: 'primary' | 'secondary';
 	size?: 'sm' | 'md' | 'lg';
+	icon?: React.ReactNode;
+	iconPosition?: 'left' | 'right';
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button = ({
 	variant = 'primary',
 	size = 'md',
+	icon,
+	iconPosition = 'left',
 	className = '',
 	children,
 	...props
@@ -30,9 +34,9 @@ const Button = ({
 
 	// Size styles
 	const sizeClasses = {
-		sm: 'px-3 py-1 text-sm rounded-md',
-		md: 'px-4 py-2 text-base rounded-lg',
-		lg: 'px-6 py-3 text-lg rounded-xl',
+		sm: 'px-3 py-1 text-sm rounded-md gap-1.5',
+		md: 'px-4 py-2 text-base rounded-lg gap-2',
+		lg: 'px-6 py-3 text-lg rounded-xl gap-2.5',
 	};
 
 	return (
@@ -40,7 +44,18 @@ const Button = ({
 			className={`font-medium transition flex items-center justify-center cursor-pointer ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
 			{...props}
 		>
+			{/* Left Icon */}
+			{icon && iconPosition === 'left' && (
+				<span className="flex items-center">{icon}</span>
+			)}
+
+			{/* Text */}
 			{children}
+
+			{/* Right Icon */}
+			{icon && iconPosition === 'right' && (
+				<span className="flex items-center">{icon}</span>
+			)}
 		</button>
 	);
 };
