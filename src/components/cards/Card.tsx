@@ -1,19 +1,21 @@
-import React from 'react'
+'use client';
+
+import React from 'react';
 
 type Props = {
-    title: string;
-    description: string;
-}
+	title: string;
+	description: string;
+	children?: React.ReactNode;
+};
 
-const Card = ({ title, description }: Props) => {
-  return (
+const Card = ({ title, description, children }: Props) => {
+	return (
 		<div className="bg-card border border-border rounded-xl p-6">
-			<h2 className="text-xl font-semibold">{title}</h2>
-			<p className="text-muted-foreground mt-2">
-				{description}
-			</p>
+			{children && <div className="mb-4">{children}</div>}
+			<h3>{title}</h3>
+			<p className="mt-2">{description}</p>
 		</div>
 	);
-}
+};
 
-export default Card
+export default Card;
