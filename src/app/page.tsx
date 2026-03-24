@@ -7,9 +7,8 @@ import Container from '@/components/ui/Container';
 import FooterMultiColumn from '@/components/layout/Footer/FooterMultiColumn';
 import HeroMobileApp from '@/components/sections/hero/HeroMobileApp';
 import FeaturesSection from '@/components/sections/features/FeatureSection';
-import { FiZap, FiUsers, FiBarChart2 } from 'react-icons/fi';
 import FeaturesSplit from '@/components/sections/features/FeaturesSplit';
-import { featuresSplitData } from '@/data/features';
+import { featuresData, featuresSplitData } from '@/data/features';
 export default function Home() {
 	return (
 		<div className="min-h-screen flex flex-col bg-background text-foreground">
@@ -36,27 +35,7 @@ export default function Home() {
 			<main className="flex-1 py-16 space-y-16">
 				<Container>
 					{/* Features Section */}
-					<FeaturesSection
-						title="Everything you need to grow"
-						subtitle="Powerful features to help you build, launch, and scale faster."
-						features={[
-							{
-								title: 'Fast Setup',
-								description: 'Get your project running in minutes.',
-								icon: <FiZap />,
-							},
-							{
-								title: 'Team Collaboration',
-								description: 'Work with your team seamlessly.',
-								icon: <FiUsers />,
-							},
-							{
-								title: 'Analytics',
-								description: 'Track your performance easily.',
-								icon: <FiBarChart2 />,
-							},
-						]}
-					/>
+					<FeaturesSection features={featuresData} />
 
 					{/* <FeaturesSplit features={featuresSplitData} /> */}
 				</Container>
