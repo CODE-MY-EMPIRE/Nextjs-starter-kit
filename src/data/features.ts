@@ -20,3 +20,21 @@ export const featuresSplitData = [
 		},
 	},
 ];
+
+export const featuresData = [
+	{
+		title: 'Fast Setup',
+		description: 'Get your project running in minutes.',
+		icon: 'zap',
+	},
+	{
+		title: 'Team Collaboration',
+		description: 'Work with your team seamlessly.',
+		icon: 'users',
+	},
+	{
+		title: 'Analytics',
+		description: 'Track your performance easily.',
+		icon: 'analytics',
+	},
+];
