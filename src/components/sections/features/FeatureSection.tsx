@@ -3,36 +3,26 @@
 import React from 'react';
 import Container from '@/components/ui/Container';
 import FeatureCard from '@/components/cards/FeatureCard';
+import SectionHeader from '@/components/ui/SectionHeader';
 
 type Feature = {
 	title: string;
 	description: string;
-	icon?: React.ReactNode;
+	icon: string; // ✅ now string, not JSX
 };
 
 type FeaturesSectionProps = {
-	title?: string;
-	subtitle?: string;
 	features: Feature[];
 };
 
-const FeaturesSection = ({
-	title,
-	subtitle,
-	features,
-}: FeaturesSectionProps) => {
+const FeaturesSection = ({ features }: FeaturesSectionProps) => {
 	return (
 		<section className="py-20 bg-background text-foreground">
-			<Container className="space-y-12">
-				{/* Section Header */}
-				{(title || subtitle) && (
-					<div className="text-center max-w-2xl mx-auto space-y-4">
-						{title && <h2>{title}</h2>}
-						{subtitle && <p>{subtitle}</p>}
-					</div>
-				)}
-
-				{/* Features Grid */}
+			<Container>
+				<SectionHeader
+					heading="Everything you need to grow"
+					subheading="Powerful features to help you build, launch, and scale faster."
+				/>
 				<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 					{features.map((feature, index) => (
 						<FeatureCard
