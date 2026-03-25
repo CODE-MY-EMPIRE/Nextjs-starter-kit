@@ -31,12 +31,10 @@ export default function Home() {
 				}
 			/>
 
-			{/* Main Content grows to push footer down */}
 			<main className="flex-1 py-16 space-y-16">
 				<Container>
 					{/* Features Section */}
 					<FeaturesSection features={featuresData} />
-
 					{/* <FeaturesSplit features={featuresSplitData} /> */}
 				</Container>
 			</main>
