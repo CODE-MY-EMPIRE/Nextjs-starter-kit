@@ -6,17 +6,22 @@ import ThemeToggle from '@/components/ui/ThemeToggle';
 
 type Props = {
 	open: boolean;
+	links: { label: string; href: string }[];
 };
 
-const MobileMenu = ({ open }: Props) => {
+const MobileMenu = ({ open, links }: Props) => {
 	if (!open) return null;
 
 	return (
 		<div className="md:hidden border-t border-border px-6 py-6 flex flex-col gap-4 bg-background">
-			<NavLink href="#features">Features</NavLink>
-			<NavLink href="#pricing">Pricing</NavLink>
-			<NavLink href="#testimonials">Testimonials</NavLink>
-			<NavLink href="#contact">Contact</NavLink>
+			{links.map((link) => (
+				<NavLink
+					key={link.href}
+					href={link.href}
+				>
+					{link.label}
+				</NavLink>
+			))}
 
 			<NavLink href="/login">Login</NavLink>
 

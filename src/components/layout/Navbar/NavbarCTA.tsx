@@ -10,12 +10,19 @@ import NavLink from './NavLink';
 import MobileMenu from './MobileMenu';
 import Container from '../../ui/Container';
 
+// ✅ Navigation data (inside same file)
+const navLinks = [
+	{ label: 'Features', href: '#features' },
+	{ label: 'Pricing', href: '#pricing' },
+	{ label: 'Testimonials', href: '#testimonials' },
+	{ label: 'Contact', href: '#contact' },
+];
+
 const NavbarCTA = () => {
 	const [open, setOpen] = useState(false);
 
 	return (
 		<header className="w-full border-b border-border bg-background">
-			{/* Use Container here instead of hardcoded max-w-7xl */}
 			<Container className="h-20 flex items-center justify-between">
 				{/* Logo */}
 				<Link
@@ -27,10 +34,14 @@ const NavbarCTA = () => {
 
 				{/* Desktop Navigation */}
 				<nav className="hidden md:flex items-center gap-8">
-					<NavLink href="#features">Features</NavLink>
-					<NavLink href="#pricing">Pricing</NavLink>
-					<NavLink href="#testimonials">Testimonials</NavLink>
-					<NavLink href="#contact">Contact</NavLink>
+					{navLinks.map((link) => (
+						<NavLink
+							key={link.href}
+							href={link.href}
+						>
+							{link.label}
+						</NavLink>
+					))}
 				</nav>
 
 				{/* Desktop Actions */}
@@ -52,8 +63,11 @@ const NavbarCTA = () => {
 				</button>
 			</Container>
 
-			{/* Mobile Menu Component */}
-			<MobileMenu open={open} />
+			{/* Mobile Menu */}
+			<MobileMenu
+				open={open}
+				links={navLinks}
+			/>
 		</header>
 	);
 };
