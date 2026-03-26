@@ -1,16 +1,22 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
+
+type CTA = {
+	text: string;
+	href: string;
+};
 
 type HeroCenteredProps = {
 	headline: string;
 	subheadline?: string;
-	primaryCTA: { text: string; onClick?: () => void };
-	secondaryCTA?: { text: string; onClick?: () => void };
+	primaryCTA: CTA;
+	secondaryCTA?: CTA;
 	badge?: string;
-	illustration?: React.ReactNode;
+	image?: string; // ✅ string instead of ReactNode
 };
 
 const HeroCentered = ({
@@ -19,7 +25,7 @@ const HeroCentered = ({
 	primaryCTA,
 	secondaryCTA,
 	badge,
-	illustration,
+	image,
 }: HeroCenteredProps) => {
 	return (
 		<section className="py-24 bg-background text-foreground">
@@ -37,11 +43,11 @@ const HeroCentered = ({
 				{/* Subheadline */}
 				{subheadline && <p className="max-w-2xl">{subheadline}</p>}
 
-				{/* CTA Buttons */}
+				{/* CTA */}
 				<div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
 					<Button
 						size="lg"
-						onClick={primaryCTA.onClick}
+						onClick={() => (window.location.href = primaryCTA.href)}
 					>
 						{primaryCTA.text}
 					</Button>
@@ -50,16 +56,24 @@ const HeroCentered = ({
 						<Button
 							variant="secondary"
 							size="lg"
-							onClick={secondaryCTA.onClick}
+							onClick={() => (window.location.href = secondaryCTA.href)}
 						>
 							{secondaryCTA.text}
 						</Button>
 					)}
 				</div>
 
-				{/* Illustration / Screenshot */}
-				{illustration && (
-					<div className="pt-10 w-full flex justify-center">{illustration}</div>
+				{/* Image */}
+				{image && (
+					<div className="pt-10 w-full flex justify-center">
+						<Image
+							src={image}
+							alt="Hero Image"
+							width={900}
+							height={500}
+							className="rounded-xl shadow"
+						/>
+					</div>
 				)}
 			</Container>
 		</section>
