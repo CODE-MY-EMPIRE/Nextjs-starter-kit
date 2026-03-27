@@ -7,7 +7,6 @@ import Container from '@/components/ui/Container';
 import FooterMultiColumn from '@/components/layout/Footer/FooterMultiColumn';
 import HeroMobileApp from '@/components/sections/hero/HeroMobileApp';
 import FeaturesSection from '@/components/sections/features/FeatureSection';
-import FeaturesSplit from '@/components/sections/features/FeaturesSplit';
 import { featuresData, featuresSplitData } from '@/data/features';
 import {
 	heroCenteredData,
@@ -15,9 +14,10 @@ import {
 	heroFeaturesData,
 	heroMobileAppData,
 } from '@/data/hero';
-import HeroFeatures from '@/components/sections/hero/HeroFeatures';
-import HeroCentered from '@/components/sections/hero/HeroCentered';
-import Hero from '@/components/sections/hero/Hero';
+// import FeaturesSplit from '@/components/sections/features/FeaturesSplit';
+// import HeroFeatures from '@/components/sections/hero/HeroFeatures';
+// import HeroCentered from '@/components/sections/hero/HeroCentered';
+// import Hero from '@/components/sections/hero/Hero';
 
 export default function Home() {
 	return (

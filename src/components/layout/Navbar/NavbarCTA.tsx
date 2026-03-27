@@ -10,7 +10,7 @@ import NavLink from './NavLink';
 import MobileMenu from './MobileMenu';
 import Container from '../../ui/Container';
 
-// ✅ Navigation data (inside same file)
+// ✅ Navigation data
 const navLinks = [
 	{ label: 'Features', href: '#features' },
 	{ label: 'Pricing', href: '#pricing' },
