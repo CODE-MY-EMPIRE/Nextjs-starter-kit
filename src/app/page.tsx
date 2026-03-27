@@ -14,6 +14,7 @@ import {
 	heroFeaturesData,
 	heroMobileAppData,
 } from '@/data/hero';
+import FeaturesCentered from '@/components/sections/features/FeaturesCentered';
 // import FeaturesSplit from '@/components/sections/features/FeaturesSplit';
 // import HeroFeatures from '@/components/sections/hero/HeroFeatures';
 // import HeroCentered from '@/components/sections/hero/HeroCentered';
@@ -35,6 +36,7 @@ export default function Home() {
 					{/* Features Section */}
 					<FeaturesSection features={featuresData} />
 					{/* <FeaturesSplit features={featuresSplitData} /> */}
+					<FeaturesCentered features={featuresData} />
 				</Container>
 			</main>
 
