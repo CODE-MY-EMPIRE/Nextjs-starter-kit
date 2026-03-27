@@ -3,7 +3,7 @@
 import React from 'react';
 import Container from '@/components/ui/Container';
 import SectionHeader from '@/components/ui/SectionHeader';
-import FeatureCardCentered from '@/components/cards/FeatureCardCentered';
+import FeatureCardCentered from '@/components/ui/cards/FeatureCardCentered';
 
 type Feature = {
 	title: string;

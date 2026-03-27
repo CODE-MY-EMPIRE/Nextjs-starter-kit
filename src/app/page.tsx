@@ -36,7 +36,7 @@ export default function Home() {
 					{/* Features Section */}
 					<FeaturesSection features={featuresData} />
 					{/* <FeaturesSplit features={featuresSplitData} /> */}
-					<FeaturesCentered features={featuresData} />
+					{/* <FeaturesCentered features={featuresData} /> */}
 				</Container>
 			</main>
 

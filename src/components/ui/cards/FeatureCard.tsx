@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiZap, FiUsers, FiBarChart2 } from 'react-icons/fi';
-import Card from '@/components/cards/Card';
+import Card from './Card';
 
 const iconMap: Record<string, React.ReactNode> = {
 	zap: <FiZap />,

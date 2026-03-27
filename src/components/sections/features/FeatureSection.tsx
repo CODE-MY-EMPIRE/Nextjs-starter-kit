@@ -2,13 +2,13 @@
 
 import React from 'react';
 import Container from '@/components/ui/Container';
-import FeatureCard from '@/components/cards/FeatureCard';
+import FeatureCard from '@/components/ui/cards/FeatureCard';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 type Feature = {
 	title: string;
 	description: string;
-	icon: string; // ✅ now string, not JSX
+	icon: string;
 };
 
 type FeaturesSectionProps = {
