@@ -4,27 +4,15 @@ import React from 'react';
 import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
+import { featuresSplitData } from './features.data';
 
-type Feature = {
-	title: string;
-	description: string;
-	image: string;
-	alt?: string;
-	cta?: {
-		text: string;
-		onClick?: () => void;
-	};
-};
 
-type FeaturesSplitProps = {
-	features: Feature[];
-};
 
-const FeaturesSplit = ({ features }: FeaturesSplitProps) => {
+const FeaturesSplit = () => {
 	return (
 		<section className="py-20 bg-background text-foreground">
 			<Container className="space-y-20">
-				{features.map((feature, index) => {
+				{featuresSplitData.map((feature, index) => {
 					const isReversed = index % 2 !== 0;
 
 					return (
@@ -40,8 +28,12 @@ const FeaturesSplit = ({ features }: FeaturesSplitProps) => {
 
 								{feature.cta && (
 									<div className="pt-4">
-										<Button onClick={feature.cta.onClick}>
-											{feature.cta.text}
+										<Button
+											onClick={() =>
+												(window.location.href = feature.cta?.text as string)
+											}
+										>
+											{feature.cta?.text}
 										</Button>
 									</div>
 								)}
@@ -50,8 +42,8 @@ const FeaturesSplit = ({ features }: FeaturesSplitProps) => {
 							{/* IMAGE */}
 							<div className="flex-1 flex justify-center">
 								<Image
-									src={feature.image}
-									alt={feature.alt || feature.title}
+									src={feature.image as string}
+									alt={feature.title as string}
 									width={500}
 									height={400}
 									className="rounded-xl shadow"

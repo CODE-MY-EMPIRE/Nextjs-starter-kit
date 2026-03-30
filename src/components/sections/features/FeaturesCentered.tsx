@@ -4,18 +4,9 @@ import React from 'react';
 import Container from '@/components/ui/Container';
 import SectionHeader from '@/components/ui/SectionHeader';
 import FeatureCardCentered from '@/components/ui/cards/FeatureCardCentered';
+import { featuresData } from './features.data';
 
-type Feature = {
-	title: string;
-	description: string;
-	icon: string;
-};
-
-type Props = {
-	features: Feature[];
-};
-
-const FeaturesCentered = ({ features }: Props) => {
+const FeaturesCentered = () => {
 	return (
 		<section className="py-20 bg-background text-foreground">
 			<Container>
@@ -25,12 +16,12 @@ const FeaturesCentered = ({ features }: Props) => {
 				/>
 
 				<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-					{features.map((feature, index) => (
+					{featuresData.map((feature, index) => (
 						<FeatureCardCentered
 							key={index}
 							title={feature.title}
 							description={feature.description}
-							icon={feature.icon}
+							icon={feature.icon as string}
 						/>
 					))}
 				</div>
