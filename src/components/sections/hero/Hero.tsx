@@ -11,13 +11,10 @@ const Hero = () => {
 	return (
 		<section className="bg-background text-foreground py-12 md:py-20">
 			<Container className="flex flex-col-reverse md:flex-row items-center gap-12">
-				{/* TEXT */}
 				<div className="flex-1 text-center md:text-left space-y-6">
 					<h1>{heroDefaultData.headline}</h1>
 
 					{heroDefaultData.subheadline && <p>{heroDefaultData.subheadline}</p>}
-
-					{/* CTA */}
 					<div className="flex flex-col sm:flex-row gap-4 mt-4 justify-center md:justify-start">
 						<Button
 							size="lg"
@@ -42,7 +39,6 @@ const Hero = () => {
 					</div>
 				</div>
 
-				{/* IMAGE */}
 				{heroDefaultData.image && (
 					<div className="flex-1 flex justify-center md:justify-end">
 						<Image

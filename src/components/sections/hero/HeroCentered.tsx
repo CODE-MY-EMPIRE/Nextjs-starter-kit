@@ -11,22 +11,16 @@ const HeroCentered = () => {
 	return (
 		<section className="py-24 bg-background text-foreground">
 			<Container className="text-center flex flex-col items-center space-y-8">
-				{/* Badge */}
 				{heroCenteredData.badge && (
 					<span className="px-3 py-1 text-sm rounded-full bg-muted text-muted-foreground">
 						{heroCenteredData.badge}
 					</span>
 				)}
 
-				{/* Headline */}
 				<h1 className="max-w-3xl">{heroCenteredData.headline}</h1>
-
-				{/* Subheadline */}
 				{heroCenteredData.subheadline && (
 					<p className="max-w-2xl">{heroCenteredData.subheadline}</p>
 				)}
-
-				{/* CTA */}
 				<div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
 					<Button
 						size="lg"
@@ -50,7 +44,6 @@ const HeroCentered = () => {
 					)}
 				</div>
 
-				{/* Image */}
 				{heroCenteredData.image && (
 					<div className="pt-10 w-full flex justify-center">
 						<Image
