@@ -7,6 +7,7 @@ import Container from '@/components/ui/Container';
 import FooterMultiColumn from '@/components/layout/Footer/FooterMultiColumn';
 import HeroMobileApp from '@/components/sections/hero/HeroMobileApp';
 import FeaturesSection from '@/components/sections/features/FeatureSection';
+import Pricing from '@/components/sections/pricing/Pricing';
 
 export default function Home() {
 	return (
@@ -20,6 +21,7 @@ export default function Home() {
 				<Container>
 					{/* Features Section */}
 					<FeaturesSection />
+					<Pricing />
 				</Container>
 			</main>
 
