@@ -4,14 +4,17 @@ import React from 'react';
 import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
+import SectionHeader from '@/components/ui/SectionHeader';
 import { featuresSplitData } from './features.data';
-
-
 
 const FeaturesSplit = () => {
 	return (
 		<section className="py-20 bg-background text-foreground">
 			<Container className="space-y-20">
+				<SectionHeader
+					heading="Everything you need to grow"
+					subheading="Powerful features to help you build, launch, and scale faster."
+				/>
 				{featuresSplitData.map((feature, index) => {
 					const isReversed = index % 2 !== 0;
 

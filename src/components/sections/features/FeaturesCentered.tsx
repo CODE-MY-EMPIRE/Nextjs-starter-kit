@@ -3,8 +3,15 @@
 import React from 'react';
 import Container from '@/components/ui/Container';
 import SectionHeader from '@/components/ui/SectionHeader';
-import FeatureCardCentered from '@/components/ui/cards/FeatureCardCentered';
+import Card from '@/components/ui/Card';
 import { featuresData } from './features.data';
+import { FiZap, FiUsers, FiBarChart2 } from 'react-icons/fi';
+
+const iconMap: Record<string, React.ReactNode> = {
+	zap: <FiZap />,
+	users: <FiUsers />,
+	analytics: <FiBarChart2 />,
+};
 
 const FeaturesCentered = () => {
 	return (
@@ -17,12 +24,21 @@ const FeaturesCentered = () => {
 
 				<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 					{featuresData.map((feature, index) => (
-						<FeatureCardCentered
+						<Card
 							key={index}
-							title={feature.title}
-							description={feature.description}
-							icon={feature.icon as string}
-						/>
+							className="text-center"
+						>
+							{/* Icon */}
+							<div className="w-12 h-12 mx-auto flex items-center justify-center text-center rounded-lg bg-primary/10 text-primary text-xl mb-4">
+								{iconMap[feature.icon as string]}
+							</div>
+
+							{/* Title */}
+							<h3>{feature.title}</h3>
+
+							{/* Description */}
+							<p>{feature.description}</p>
+						</Card>
 					))}
 				</div>
 			</Container>
