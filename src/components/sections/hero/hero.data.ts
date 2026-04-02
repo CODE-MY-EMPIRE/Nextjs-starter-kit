@@ -1,4 +1,62 @@
-export const heroDefaultData = {
+export type HeroDefaultData = {
+	headline: string;
+	subheadline: string;
+	image: string;
+	primaryCTA: {
+		text: string;
+		href: string;
+	};
+	secondaryCTA: {
+		text: string;
+		href: string;
+	};
+};
+
+export type HeroMobileAppData = {
+	headline: string;
+	subheadline: string;
+	image: string;
+	iosCTA: {
+		text: string;
+		href: string;
+	};
+	androidCTA: {
+		text: string;
+		href: string;
+	};
+};
+
+export type HeroFeaturesData = {
+	headline: string;
+	subheadline: string;
+	image: string;
+	cta: {
+		text: string;
+		href: string;
+	};
+	features: {
+		title: string;
+		description: string;
+		icon: string;
+	}[];
+};
+
+export type HeroCenteredData = {
+	badge: string;
+	headline: string;
+	subheadline: string;
+	image: string;
+	primaryCTA: {
+		text: string;
+		href: string;
+	};
+	secondaryCTA: {
+		text: string;
+		href: string;
+	};
+};
+
+export const heroDefaultData: HeroDefaultData = {
 	headline: 'Build modern SaaS apps faster',
 	subheadline:
 		'A clean and scalable starter kit for building landing pages and products.',
@@ -13,7 +71,7 @@ export const heroDefaultData = {
 	},
 };
 
-export const heroMobileAppData = {
+export const heroMobileAppData: HeroMobileAppData = {
 	headline: 'Track Your Fitness Anywhere',
 	subheadline: 'Your personal fitness coach in your pocket.',
 	image: '/images/mobile.png',
@@ -27,7 +85,7 @@ export const heroMobileAppData = {
 	},
 };
 
-export const heroFeaturesData = {
+export const heroFeaturesData: HeroFeaturesData = {
 	headline: 'All-in-one platform to grow your business',
 	subheadline:
 		'Everything you need to manage, analyze, and scale your product.',
@@ -55,7 +113,7 @@ export const heroFeaturesData = {
 	],
 };
 
-export const heroCenteredData = {
+export const heroCenteredData: HeroCenteredData = {
 	badge: '🚀 New Release',
 	headline: 'Build faster. Launch smarter.',
 	subheadline:
