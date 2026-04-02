@@ -23,19 +23,14 @@ const PricingSection = () => {
 							className="flex flex-col text-center h-full"
 						>
 							<div className="flex-1">
-								{/* Title */}
 								<div className="flex flex-col gap-2">
 									<h3>{plan.title}</h3>
-
-									{/* Price */}
-									<span className="text-2xl font-bold text-primary">{plan.price}</span>
-
-									{/* Description */}
+									<span className="text-2xl font-bold text-primary">
+										{plan.price}
+									</span>
 									<p>{plan.description}</p>
 								</div>
 								<hr className="my-4" />
-
-								{/* Features List */}
 								<ul className="mt-4 flex flex-col gap-3 text-left">
 									{plan.features.map((feature, idx) => (
 										<li
@@ -48,8 +43,6 @@ const PricingSection = () => {
 									))}
 								</ul>
 							</div>
-
-							{/* CTA Button */}
 							<button className="mt-6 px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition">
 								{plan.ctaText}
 							</button>
