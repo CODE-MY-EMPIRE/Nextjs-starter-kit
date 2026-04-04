@@ -7,6 +7,7 @@ import HeroMobileApp from '@/components/sections/hero/HeroMobileApp';
 import FeaturesSection from '@/components/sections/features/FeatureSection';
 import Pricing from '@/components/sections/pricing/Pricing';
 import { TestimonialsGrid } from '@/components/sections/testimonials/TestimonialsGrid';
+import { TestimonialCarousel } from '@/components/sections/testimonials/TestimonialCarousel';
 
 export default function Home() {
 	return (
@@ -22,6 +23,7 @@ export default function Home() {
 					<FeaturesSection />
 					<Pricing />
 					<TestimonialsGrid />
+					<TestimonialCarousel />
 				</Container>
 			</main>
 
