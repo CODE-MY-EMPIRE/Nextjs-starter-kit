@@ -6,8 +6,8 @@ import FooterMultiColumn from '@/components/layout/Footer/FooterMultiColumn';
 import HeroMobileApp from '@/components/sections/hero/HeroMobileApp';
 import FeaturesSection from '@/components/sections/features/FeatureSection';
 import Pricing from '@/components/sections/pricing/Pricing';
-import { TestimonialsGrid } from '@/components/sections/testimonials/TestimonialsGrid';
 import { TestimonialCarousel } from '@/components/sections/testimonials/TestimonialCarousel';
+import { PartnerMarquee } from '@/components/sections/partners/PartnerMarquee';
 
 export default function Home() {
 	return (
@@ -19,10 +19,10 @@ export default function Home() {
 
 			<main className="flex-1 py-16 space-y-16">
 				<Container>
+					<PartnerMarquee />
 					{/* Features Section */}
 					<FeaturesSection />
 					<Pricing />
-					<TestimonialsGrid />
 					<TestimonialCarousel />
 				</Container>
 			</main>
