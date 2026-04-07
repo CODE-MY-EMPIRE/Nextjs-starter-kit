@@ -8,6 +8,7 @@ import FeaturesSection from '@/components/sections/features/FeatureSection';
 import Pricing from '@/components/sections/pricing/Pricing';
 import { TestimonialCarousel } from '@/components/sections/testimonials/TestimonialCarousel';
 import { PartnerMarquee } from '@/components/sections/partners/PartnerMarquee';
+import { Faq } from '@/components/sections/faq/Faq';
 
 export default function Home() {
 	return (
@@ -24,6 +25,7 @@ export default function Home() {
 					<FeaturesSection />
 					<Pricing />
 					<TestimonialCarousel />
+					<Faq />
 				</Container>
 			</main>
 
