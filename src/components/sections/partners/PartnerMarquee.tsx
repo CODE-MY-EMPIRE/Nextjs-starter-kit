@@ -10,10 +10,7 @@ export function PartnerMarquee() {
 		<section className="py-16 overflow-hidden">
 			<Container>
 				{/* Heading */}
-				<SectionHeader
-					heading="Trusted by great customers"
-					subheading="We are proud to partner with some of the best companies in the world."
-				/>
+				<SectionHeader subheading="Loved by the best companies in the world." />
 
 				<div className="relative overflow-hidden">
 					{/* Moving row */}
