@@ -1,7 +1,7 @@
 'use client';
 
 type Props = {
-	heading: string;
+	heading?: string;
 	subheading?: string;
 };
 
