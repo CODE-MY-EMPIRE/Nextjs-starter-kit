@@ -26,6 +26,7 @@ export default function Home() {
 					<CTA />
 					<TestimonialCarousel />
 					<Faq />
+					<CTA />
 				</Container>
 			</main>
 			<FooterMultiColumn />
