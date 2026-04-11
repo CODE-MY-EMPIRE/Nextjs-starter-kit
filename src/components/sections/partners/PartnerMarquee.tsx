@@ -9,13 +9,10 @@ export function PartnerMarquee() {
 	return (
 		<section className="py-16 overflow-hidden">
 			<Container>
-				{/* Heading */}
 				<SectionHeader subheading="Loved by the best companies in the world." />
 
 				<div className="relative overflow-hidden">
-					{/* Moving row */}
 					<div className="flex w-max gap-12 animate-marquee">
-						{/* Duplicate for infinite loop */}
 						{[...logos, ...logos].map((logo, index) => (
 							<div
 								key={index}
